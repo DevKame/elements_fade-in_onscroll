@@ -1,0 +1,165 @@
+
+/* Just an example of a stylesheet ----------------------------------START: */
+:root {
+    --main-color: #77b4c8;
+    --sec-color: #6fa1c5;
+    --dark-acc: #417f92;
+    --ui: #96afb8;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    outline-offset: 0;
+    font-family: sans-serif;
+  }
+  body {
+    background-color: var(--main-color);
+    height: 400vh;
+    overflow-x: hidden;
+  }
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background-image: linear-gradient(to right top, #77b4c8, #6bbecd, #61c8cf, #5cd2cb, #61dbc4);
+  }
+  header h1 {
+    font-size: 7vmin;
+    background-color: var(--dark-acc);
+    padding: 10px 20px;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 10px -1px #333;
+    color: #bbb;
+    text-shadow: 0 0 5px #333;
+  }
+  section {
+    display: flex;
+    height: 500px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25%;
+  }
+  .left-wrappers {
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+  article h3 {
+    font-size: 3vmin;
+    background-color: var(--dark-acc);
+    display: inline;
+    padding: 5px 10px;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 10px -1px #333;
+    color: #bbb;
+    text-shadow: 0 0 5px #333;
+  }
+  article p:first-of-type {
+    margin-top: 5%;
+  }
+  article p {
+    line-height: 300%;
+    font-size: 2.5vmin;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .recs {
+    width: 45%;
+    height: 90%;
+    background-color: var(--ui);
+    margin: 2%;
+    border-radius: .4rem;
+    box-shadow: 0 0 10px -2px #333;
+  }
+  article.invp {
+    transform: rotateY(0)
+                rotateZ(0)
+                scale(1)
+                translateX(0)
+                translateY(0);
+    opacity: 1;
+  }
+  .hl-wrappers.invp {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .small-wrappers.invp {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .dividers.invp {
+    opacity: 1;
+  }
+  .hl-wrappers h3 {
+    font-size: 2.5vmin;
+    color: #bbb;
+    text-shadow: 0 0 5px #333;
+  }
+  .squares {
+    width: 20%;
+    margin: 2%;
+    aspect-ratio: 1;
+    background-color: var(--ui);
+    border-radius: .3rem;
+    box-shadow: 0 0 10px -2px #333;
+  }
+  /* Just an example of a stylesheet ----------------------------------END */
+  .hl-wrappers {
+    background-color: var(--dark-acc);
+    border-radius: .4rem;
+    width: 90%;
+    height: 10%;
+    display: grid;
+    place-items: center;
+    /* place it in any way depending on what effect is planned from you. This is the starting status BEFORE you scroll on its height: */
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: all .5s;
+  }
+  .small-wrappers {
+    width: 90%;
+    height: 80%;
+    background-color: var(--sec-color);
+    border-radius: .3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 2%;
+    align-items: center;
+    /* place it in any way depending on what effect is planned from you. This is the starting status BEFORE you scroll on its height: */
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: all .7s;
+  }
+  .dividers {
+    height: 90%;
+    width: 2px;
+    background-color: rgba(130,130,130,.6);
+    box-shadow: -2px 0 10px 1px #333;
+    /* place it in any way depending on what effect is planned from you. This is the starting status BEFORE you scroll on its height: */
+    opacity: 0;
+    transition: all .3s;
+  }
+  article {
+    width: 50%;
+    height: 90%;
+    padding: 3% 2%;
+    background-color: var(--sec-color);
+    border-radius: .5rem;
+    /* place it in any way depending on what effect is planned from you. This is the starting status BEFORE you scroll on its height: */
+    opacity: 0;
+    transform: rotateY(60deg)
+                rotateZ(20deg)
+                scale(.5)
+                translateX(150%)
+                translateY(-100%);
+    transition: all .3s;
+  }
